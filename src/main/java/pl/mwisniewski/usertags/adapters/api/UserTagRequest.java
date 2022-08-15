@@ -5,7 +5,6 @@ import pl.mwisniewski.usertags.domain.model.Action;
 import pl.mwisniewski.usertags.domain.model.Device;
 import pl.mwisniewski.usertags.domain.model.UserTag;
 
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
 public record UserTagRequest(String time,
