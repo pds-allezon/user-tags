@@ -1,6 +1,6 @@
 package pl.mwisniewski.usertags.domain.model;
 
-public record UserTag(Long timestampMs,
+public record UserTag(String time,
                       String cookie,
                       String country,
                       Device device,

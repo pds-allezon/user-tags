@@ -1,4 +1,4 @@
-package pl.mwisniewski.usertags.adapters;
+package pl.mwisniewski.usertags.adapters.dummy;
 
 import org.springframework.stereotype.Component;
 import pl.mwisniewski.usertags.domain.UserTagEventPublisher;

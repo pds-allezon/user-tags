@@ -5,8 +5,6 @@ import pl.mwisniewski.usertags.domain.model.Action;
 import pl.mwisniewski.usertags.domain.model.Device;
 import pl.mwisniewski.usertags.domain.model.UserTag;
 
-import java.time.ZonedDateTime;
-
 public record UserTagRequest(String time,
                              String cookie,
                              String country,
@@ -16,7 +14,7 @@ public record UserTagRequest(String time,
                              @JsonProperty("product_info") ProductInfoRequest productInfo) {
     public UserTag toDomain() {
         return new UserTag(
-                ZonedDateTime.parse(time).toInstant().toEpochMilli(),
+                time,
                 cookie,
                 country,
                 Device.valueOf(device),
