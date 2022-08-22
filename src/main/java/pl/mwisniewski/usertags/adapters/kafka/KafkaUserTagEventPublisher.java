@@ -3,6 +3,7 @@ package pl.mwisniewski.usertags.adapters.kafka;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Component;
@@ -12,7 +13,7 @@ import pl.mwisniewski.usertags.domain.UserTagEventPublisher;
 import pl.mwisniewski.usertags.domain.model.UserTag;
 
 @Component
-@Primary
+@Profile("prod")
 public class KafkaUserTagEventPublisher implements UserTagEventPublisher {
 
     private final KafkaTemplate<String, UserTag> kafkaTemplate;

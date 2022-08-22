@@ -6,10 +6,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ActiveProfiles;
 import pl.mwisniewski.usertags.adapters.api.ProductInfoRequest;
 import pl.mwisniewski.usertags.adapters.api.UserTagEndpoint;
 import pl.mwisniewski.usertags.adapters.api.UserTagRequest;
 
+@ActiveProfiles("test")
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 class UserTagsApplicationTests {
     @Autowired
