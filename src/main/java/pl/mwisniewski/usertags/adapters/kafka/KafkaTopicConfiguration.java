@@ -13,9 +13,6 @@ public class KafkaTopicConfiguration {
     public NewTopic userTagTopic() {
         return TopicBuilder
                 .name("user-tag")
-                .config(TopicConfig.RETENTION_MS_CONFIG, ONE_DAY_MS.toString())
                 .build();
     }
-
-    private static final Long ONE_DAY_MS = 24L * 60L * 60L * 1000L;
 }
