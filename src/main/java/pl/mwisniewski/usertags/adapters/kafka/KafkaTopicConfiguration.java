@@ -1,7 +1,6 @@
 package pl.mwisniewski.usertags.adapters.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
-import org.apache.kafka.common.config.TopicConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
@@ -12,7 +11,7 @@ public class KafkaTopicConfiguration {
     @Bean
     public NewTopic userTagTopic() {
         return TopicBuilder
-                .name("user-tag")
+                .name("user-tags")
                 .build();
     }
 }
