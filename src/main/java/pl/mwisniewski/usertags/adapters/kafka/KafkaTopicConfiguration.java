@@ -16,9 +16,10 @@ public class KafkaTopicConfiguration {
     public NewTopic userTagTopic() {
         return TopicBuilder
                 .name(topicName)
-                .config(TopicConfig.RETENTION_MS_CONFIG, HOUR_MS.toString())
+                .config(TopicConfig.RETENTION_MS_CONFIG, MINUTES_15.toString())
+                .config(TopicConfig.CLEANUP_POLICY_CONFIG, "delete")
                 .build();
     }
 
-    private static final Integer HOUR_MS = 1 * 60 * 60 * 1000;
+    private static final Integer MINUTES_15 = 15 * 60 * 1000;
 }
