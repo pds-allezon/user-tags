@@ -37,7 +37,7 @@ public class KafkaUserTagEventPublisher implements UserTagEventPublisher {
 
             @Override
             public void onSuccess(SendResult<String, UserTag> result) {
-                logger.info("Message {} delivered with offset {}", userTag, result.getRecordMetadata().offset());
+                logger.debug("Message {} delivered with offset {}", userTag, result.getRecordMetadata().offset());
             }
         });
     }
